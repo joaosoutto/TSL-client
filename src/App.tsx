@@ -1,10 +1,14 @@
 import React from 'react';
 import './App.css';
+import BottomNavigation from './components/BottomNavigation';
+import Header from './components/Header';
+import Logo from './components/Logo';
 
 function App() {
   return (
     <div className='App'>
-      <h1>First Commit!</h1>
+      <Header />
+      <BottomNavigation />
     </div>
   );
 }
