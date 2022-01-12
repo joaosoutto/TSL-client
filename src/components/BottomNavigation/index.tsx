@@ -5,30 +5,44 @@ import { CommentAdd } from '@styled-icons/boxicons-solid/CommentAdd';
 
 import BottomNavigationLink from '../BottomNavigationLink';
 
-const BottomNavigation = () => {
-  const token = true;
+export type BottomNavigationProps = {
+  token: string;
+};
 
+const BottomNavigation = ({ token }: BottomNavigationProps) => {
   return (
-    <S.Wrapper>
+    <S.Wrapper data-testid='wrapper'>
       {token ? (
         <>
-          <BottomNavigationLink path='/' label='Home' icon={<Home />} />
+          <BottomNavigationLink
+            path='/'
+            label='Home'
+            icon={<Home aria-label='Home icon' />}
+          />
           <S.NewPostButton onClick={() => console.log('new post')}>
             <S.Icon>
-              <CommentAdd />
+              <CommentAdd aria-label='New post button' />
             </S.Icon>
             New Post
           </S.NewPostButton>
           <BottomNavigationLink
             path='my-posts'
             label='My Posts'
-            icon={<User />}
+            icon={<User aria-label='User icon' />}
           />
         </>
       ) : (
         <>
-          <BottomNavigationLink path='/' label='Home' icon={<Home />} />
-          <BottomNavigationLink path='login' label='Login' icon={<Login />} />
+          <BottomNavigationLink
+            path='/'
+            label='Home'
+            icon={<Home aria-label='Home icon' />}
+          />
+          <BottomNavigationLink
+            path='login'
+            label='Login'
+            icon={<Login aria-label='Login icon' />}
+          />
         </>
       )}
     </S.Wrapper>

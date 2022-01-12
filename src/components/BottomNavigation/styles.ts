@@ -16,9 +16,8 @@ export const Wrapper = styled.footer`
     box-shadow: 0px -2px 3px 0px rgba(0, 0, 0, 0.2);
     background-image: url(${bottomBg});
     ${media.greaterThan('medium')`
-   
-   display: none;
-`};
+      display: none;
+    `};
   `}
 `;
 

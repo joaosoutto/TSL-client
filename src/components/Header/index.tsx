@@ -10,12 +10,12 @@ import { Menu } from '@styled-icons/entypo/Menu';
 import { Close } from '@styled-icons/material-outlined/Close';
 
 export type HeaderProps = {
-  token?: boolean;
-  username?: string;
+  token: string;
 };
 
-const Header = ({ token, username }: HeaderProps) => {
+const Header = ({ token }: HeaderProps) => {
   const [isOpen, setIsOpen] = useState(false);
+  const username = 'TokenTest';
 
   return (
     <S.Wrapper>
