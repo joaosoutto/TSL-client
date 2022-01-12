@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import media from 'styled-media-query';
+import bottomBg from '../../assets/bottomBg.png';
 
 export const Wrapper = styled.footer`
   ${({ theme }) => css`
@@ -13,8 +14,32 @@ export const Wrapper = styled.footer`
     gap: 50px;
     padding: 0 ${theme.spacings.xlarge};
     box-shadow: 0px -2px 3px 0px rgba(0, 0, 0, 0.2);
+    background-image: url(${bottomBg});
     ${media.greaterThan('medium')`
-  display: none;
-`}
+   
+   display: none;
+`};
+  `}
+`;
+
+export const NewPostButton = styled.button`
+  ${({ theme }) => css`
+    font-size: ${theme.font.sizes.xsmall};
+    color: ${theme.colors.primary};
+    font-weight: ${theme.font.bold};
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: ${theme.spacings.xsmall};
+    border: none;
+    background-color: transparent;
+  `}
+`;
+
+export const Icon = styled.div`
+  ${({ theme }) => css`
+    width: 30px;
+    color: ${theme.colors.primary};
   `}
 `;

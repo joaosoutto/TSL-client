@@ -14,14 +14,14 @@ export const Wrapper = styled.a`
 
 export const Icon = styled.div`
   ${({ theme }) => css`
-    width: 30px;
+    width: 28px;
     color: ${theme.colors.primary};
   `}
 `;
 
 export const Label = styled.h3`
   ${({ theme }) => css`
-    font-size: ${theme.font.sizes.xsmall};
+    font-size: ${theme.font.sizes.xxsmall};
     color: ${theme.colors.primary};
   `}
 `;
