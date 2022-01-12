@@ -19,10 +19,7 @@ const Header = ({ token, username }: HeaderProps) => {
 
   return (
     <S.Wrapper>
-      <Logo
-        aria-label='The Silver Wall'
-        size={media.lessThan('medium') ? 'small' : 'normal'}
-      />
+      <Logo size={media.lessThan('medium') ? 'small' : 'normal'} />
 
       {token ? (
         <>

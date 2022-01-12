@@ -3,8 +3,8 @@ import { LogoProps } from '.';
 
 const wrapperModifiers = {
   small: () => css`
-    width: 120px;
-    height: 70px;
+    width: 140px;
+    height: 80px;
     cursor: pointer;
   `,
   normal: () => css`
