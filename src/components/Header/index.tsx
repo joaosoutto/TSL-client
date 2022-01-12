@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import media from 'styled-media-query';
 
 import Logo from '../Logo';
@@ -16,6 +16,12 @@ export type HeaderProps = {
 const Header = ({ token }: HeaderProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const username = 'TokenTest';
+
+  if (
+    window.location.pathname === '/login' ||
+    window.location.pathname === '/sign-in'
+  )
+    return null;
 
   return (
     <S.Wrapper>
