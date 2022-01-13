@@ -11,7 +11,6 @@ export const Wrapper = styled.main`
   height: 100vh;
   background-image: url(${formBg});
   background-size: cover;
-  width: 50%;
 `;
 
 export const TextWrapper = styled.div`
