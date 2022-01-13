@@ -9,7 +9,7 @@ export default {
       medium: '22px',
       large: '24px',
       xlarge: '28px',
-      xxlarge: '32px',
+      xxlarge: '36px',
       huge: '44px',
     },
   },

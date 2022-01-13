@@ -11,6 +11,7 @@ export const Wrapper = styled.header`
     padding: 12px 50px;
     background-color: ${theme.colors.mainBg};
     background-image: url(${headerBg});
+    background-size: cover;
     box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.54);
     position: relative;
     ${media.lessThan('medium')`

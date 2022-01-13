@@ -18,8 +18,8 @@ const wrapperModifiers = {
     cursor: pointer;
   `,
   huge: () => css`
-    width: 300;
-    height: 200px;
+    width: 320px;
+    height: 190px;
     cursor: pointer;
   `,
 };
