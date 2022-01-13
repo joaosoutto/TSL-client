@@ -1,12 +1,12 @@
 import FormCover from '../../components/FormCover';
-import FormSignIn from '../../components/FormSignIn';
+import FormSignUp from '../../components/FormSignUp';
 import * as S from './styles';
 
-const SignIn = () => (
+const SignUp = () => (
   <S.Wrapper>
     <FormCover />
-    <FormSignIn />
+    <FormSignUp />
   </S.Wrapper>
 );
 
-export default SignIn;
+export default SignUp;

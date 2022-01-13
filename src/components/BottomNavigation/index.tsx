@@ -11,8 +11,8 @@ export type BottomNavigationProps = {
 
 const BottomNavigation = ({ token }: BottomNavigationProps) => {
   if (
-    window.location.pathname === '/login' ||
-    window.location.pathname === '/sign-in'
+    window.location.pathname === '/sign-in' ||
+    window.location.pathname === '/sign-up'
   )
     return null;
 
@@ -45,7 +45,7 @@ const BottomNavigation = ({ token }: BottomNavigationProps) => {
             icon={<Home aria-label='Home icon' />}
           />
           <BottomNavigationLink
-            path='login'
+            path='sign-in'
             label='Login'
             icon={<Login aria-label='Login icon' />}
           />

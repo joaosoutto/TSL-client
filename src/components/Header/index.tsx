@@ -18,8 +18,8 @@ const Header = ({ token }: HeaderProps) => {
   const username = 'TokenTest';
 
   if (
-    window.location.pathname === '/login' ||
-    window.location.pathname === '/sign-in'
+    window.location.pathname === '/sign-in' ||
+    window.location.pathname === '/sign-up'
   )
     return null;
 
@@ -40,7 +40,7 @@ const Header = ({ token }: HeaderProps) => {
           </S.IconWrapper>
         </>
       ) : (
-        <S.Nav href='login'>
+        <S.Nav href='sign-in'>
           <S.Text>Login</S.Text>
           <S.Icon>
             <Login aria-label='Login' />

@@ -50,7 +50,6 @@ export const Wrapper = styled.button<WrapperProps>`
     color: ${theme.colors.lightGray};
     border: none;
     padding: ${theme.spacings.xsmall} ${theme.spacings.small};
-    margin: ${theme.spacings.xxlarge} 0;
     font-weight: ${theme.font.bold};
     border-radius: 6px;
     position: relative;

@@ -33,7 +33,7 @@ describe('<BottomNavigation />', () => {
     renderWithTheme(<BottomNavigation token='' />);
 
     const link = screen.getByLabelText(/login/i);
-    expect(link.closest('a')).toHaveAttribute('href', 'login');
+    expect(link.closest('a')).toHaveAttribute('href', 'sign-in');
   });
 
   it('should change path when click My Posts', () => {

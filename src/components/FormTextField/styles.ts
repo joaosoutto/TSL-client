@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import media from 'styled-media-query';
 
 export const InputWrapper = styled.div`
   ${({ theme }) => css`
@@ -10,17 +11,21 @@ export const InputWrapper = styled.div`
     border: 0.2rem solid;
     border-color: ${theme.colors.lightGray};
     transition: all 0.2s;
+    margin-top: ${theme.spacings.xxsmall};
     &:focus-within {
       box-shadow: 0 0 7px ${theme.colors.primary};
     }
+    ${media.lessThan('medium')`
+    margin-top: 0;
   `}
+  `};
 `;
 
 export const Input = styled.input`
   ${({ theme }) => css`
     color: ${theme.colors.mainBg};
     font-size: ${theme.font.sizes.small};
-    padding: ${theme.spacings.xsmall} 0;
+    padding: ${theme.spacings.small} 0;
     padding-left: ${theme.spacings.xsmall};
     background: transparent;
     border: 0;

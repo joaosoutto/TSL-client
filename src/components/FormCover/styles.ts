@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import formBg from '../../assets/formBg.png';
+import media from 'styled-media-query';
 
 export const Wrapper = styled.main`
   background-color: red;
@@ -11,6 +12,9 @@ export const Wrapper = styled.main`
   height: 100vh;
   background-image: url(${formBg});
   background-size: cover;
+  ${media.lessThan('medium')`
+    display: none;
+  `};
 `;
 
 export const TextWrapper = styled.div`
