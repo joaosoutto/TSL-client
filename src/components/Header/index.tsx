@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import media from 'styled-media-query';
 
 import Logo from '../Logo';
