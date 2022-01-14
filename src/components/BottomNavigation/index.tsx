@@ -1,3 +1,5 @@
+import { ReactElement } from 'react';
+
 import * as S from './styles';
 import { Home, Login } from '@styled-icons/material';
 import { User } from '@styled-icons/boxicons-solid/User';
@@ -9,7 +11,7 @@ export type BottomNavigationProps = {
   token: string;
 };
 
-const BottomNavigation = ({ token }: BottomNavigationProps) => {
+const BottomNavigation = ({ token }: BottomNavigationProps): ReactElement => {
   return (
     <S.Wrapper data-testid='wrapper'>
       {token ? (

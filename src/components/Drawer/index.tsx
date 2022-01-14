@@ -1,4 +1,8 @@
+import { ReactElement } from 'react';
+import { useHistory } from 'react-router-dom';
+
 import * as S from './styles';
+
 import { Logout } from '@styled-icons/material';
 import { Home } from '@styled-icons/material';
 import { User } from '@styled-icons/boxicons-solid/User';
@@ -10,8 +14,16 @@ export type DrawerProps = {
   token: string;
 };
 
-const Drawer = ({ token }: DrawerProps) => {
-  if (!token) return null;
+const Drawer = ({ token }: DrawerProps): ReactElement => {
+  const history = useHistory();
+
+  const logout = (): void => {
+    localStorage.removeItem('token');
+    history.push('/');
+    history.go(0);
+  };
+
+  if (!token) return <div style={{ display: 'none' }} />;
   return (
     <S.Wrapper data-testid='Drawer'>
       <S.Navigation>
@@ -31,7 +43,7 @@ const Drawer = ({ token }: DrawerProps) => {
           icon={<Heart aria-label='Favorites icon' />}
         />
       </S.Navigation>
-      <S.LogoutButton onClick={() => console.log('logout')}>
+      <S.LogoutButton onClick={() => logout()}>
         Logout{' '}
         <S.LogoutIcon>
           <Logout />

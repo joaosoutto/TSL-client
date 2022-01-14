@@ -1,4 +1,6 @@
-import { useState } from 'react';
+import { useState, ReactElement } from 'react';
+import { useHistory } from 'react-router-dom';
+
 import media from 'styled-media-query';
 
 import Logo from '../Logo';
@@ -13,9 +15,17 @@ export type HeaderProps = {
   token: string;
 };
 
-const Header = ({ token }: HeaderProps) => {
+const Header = ({ token }: HeaderProps): ReactElement => {
+  const history = useHistory();
+
   const [isOpen, setIsOpen] = useState(false);
   const username = 'TokenTest';
+
+  const logout = (): void => {
+    localStorage.removeItem('token');
+    history.push('/');
+    history.go(0);
+  };
 
   return (
     <S.Wrapper>
@@ -55,7 +65,7 @@ const Header = ({ token }: HeaderProps) => {
           <S.MenuLink href='my-posts'>My Posts</S.MenuLink>
         </S.MenuNav>
         <S.Logout>
-          <S.LogoutButton onClick={() => console.log('logout')}>
+          <S.LogoutButton onClick={() => logout()}>
             Logout{' '}
             <S.LogoutIcon>
               <Logout />
