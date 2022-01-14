@@ -4,7 +4,7 @@ export const Container = styled.main`
   ${({ theme }) => css`
     background-color: ${theme.colors.lightBg};
     display: flex;
-    height: calc(100vh - 108px;);
+    height: calc(100vh - 108px);
   `}
 `;
 
@@ -16,7 +16,7 @@ export const LayoutContainer = styled.div`
     overflow-y: auto;
     overflow-x: hidden;
     text-align: center;
-    padding: 40px 0 150px 0;
+    padding-top: 40px;
   `}
 `;
 
