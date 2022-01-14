@@ -7,12 +7,12 @@ export const Wrapper = styled.footer`
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 80px;
+    height: 70px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     gap: 50px;
-    padding: 0 ${theme.spacings.xlarge};
+    padding: ${theme.spacings.small} ${theme.spacings.xlarge};
     box-shadow: 0px -2px 3px 0px rgba(0, 0, 0, 0.2);
     background-image: url(${bottomBg});
     ${media.greaterThan('medium')`

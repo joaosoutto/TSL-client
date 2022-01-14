@@ -17,12 +17,6 @@ const Header = ({ token }: HeaderProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const username = 'TokenTest';
 
-  if (
-    window.location.pathname === '/sign-in' ||
-    window.location.pathname === '/sign-up'
-  )
-    return null;
-
   return (
     <S.Wrapper>
       <Logo size={media.lessThan('medium') ? 'small' : 'normal'} />

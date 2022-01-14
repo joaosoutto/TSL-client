@@ -10,12 +10,6 @@ export type BottomNavigationProps = {
 };
 
 const BottomNavigation = ({ token }: BottomNavigationProps) => {
-  if (
-    window.location.pathname === '/sign-in' ||
-    window.location.pathname === '/sign-up'
-  )
-    return null;
-
   return (
     <S.Wrapper data-testid='wrapper'>
       {token ? (

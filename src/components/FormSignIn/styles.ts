@@ -25,15 +25,13 @@ export const Wrapper = styled.main`
 `;
 
 export const LogoWrapper = styled.div`
-  ${({ theme }) => css`
-    align-self: flex-start;
-    justify-self: flex-start;
-    position: absolute;
-    top: 24px;
-    ${media.greaterThan('medium')`
+  align-self: flex-start;
+  justify-self: flex-start;
+  position: absolute;
+  top: 24px;
+  ${media.greaterThan('medium')`
         display: none;
     `};
-  `}
 `;
 
 export const Title = styled.h3`

@@ -1,6 +1,5 @@
 import styled, { css } from 'styled-components';
 import media from 'styled-media-query';
-import brickWalls from '../../assets/brickWalls.png';
 import headerBg from '../../assets/headerBg.png';
 
 export const Wrapper = styled.header`
@@ -104,14 +103,12 @@ export const User = styled.span`
 `;
 
 export const MenuNav = styled.div`
-  ${({ theme }) => css`
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex: 1;
-    flex-direction: column;
-    padding-top: 100px;
-  `}
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1;
+  flex-direction: column;
+  padding-top: 100px;
 `;
 
 export const MenuLink = styled.a`
@@ -136,7 +133,7 @@ export const MenuFull = styled.nav<MenuFullProps>`
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    z-index: 20;
+    z-index: 1000;
     top: 0;
     bottom: 0;
     left: 0;
@@ -146,8 +143,7 @@ export const MenuFull = styled.nav<MenuFullProps>`
     transition: opacity 0.3s ease-in-out;
     opacity: ${isOpen ? 1 : 0};
     pointer-events: ${isOpen ? 'all' : 'none'};
-    background-image: url(${brickWalls});
-    background-size: cover;
+    background-color: ${theme.colors.lightBg};
 
     > svg {
       position: absolute;
