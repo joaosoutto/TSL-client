@@ -1,6 +1,7 @@
+import { ReactElement } from 'react';
 import Layout from '../../components/Layout';
 
-const MyPosts = () => (
+const MyPosts = (): ReactElement => (
   <Layout>
     <h1>MyPosts</h1>
   </Layout>

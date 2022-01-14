@@ -1,3 +1,5 @@
+import { ReactElement } from 'react';
+import { useHistory } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 import getToken from '../../services/getToken';
@@ -12,11 +14,15 @@ export type LayoutProps = {
   children: React.ReactNode;
 };
 
-const Layout = ({ children }: LayoutProps) => {
+const Layout = ({ children }: LayoutProps): ReactElement => {
+  const history = useHistory();
   const [token, setToken] = useState('');
 
   useEffect(() => {
     const userToken = getToken();
+    if (!token) {
+      history.push('/');
+    }
     setToken(userToken);
   }, []);
 
