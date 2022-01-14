@@ -85,6 +85,7 @@ export const SignUp = styled.p`
         left: 0;
       }
     }
+
     ${media.lessThan('medium')`
     margin-top: ${theme.spacings.large};
 `}

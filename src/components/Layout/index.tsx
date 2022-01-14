@@ -24,7 +24,7 @@ const Layout = ({ children }: LayoutProps): ReactElement => {
       history.push('/');
     }
     setToken(userToken);
-  }, []);
+  }, [token, history]);
 
   return (
     <>

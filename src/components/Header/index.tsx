@@ -1,8 +1,6 @@
 import { useState, ReactElement } from 'react';
 import { useHistory } from 'react-router-dom';
 
-import media from 'styled-media-query';
-
 import Logo from '../Logo';
 
 import * as S from './styles';
