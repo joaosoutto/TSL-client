@@ -20,11 +20,12 @@ const Layout = ({ children }: LayoutProps): ReactElement => {
 
   useEffect(() => {
     const userToken = getToken();
-    if (!token) {
+    setToken(userToken);
+
+    if (!userToken) {
       history.push('/');
     }
-    setToken(userToken);
-  }, [token, history]);
+  }, [history]);
 
   return (
     <>
