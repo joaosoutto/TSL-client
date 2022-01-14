@@ -58,7 +58,6 @@ export const SignUp = styled.p`
     margin-top: ${theme.spacings.xlarge};
 
     > a {
-      color: red;
       color: ${theme.colors.primary};
       text-decoration: none;
       position: relative;

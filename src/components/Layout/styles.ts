@@ -4,7 +4,7 @@ export const Container = styled.main`
   ${({ theme }) => css`
     background-color: ${theme.colors.lightBg};
     display: flex;
-    height: calc(100vh - 108px);
+    height: calc(100vh - 84px);
   `}
 `;
 

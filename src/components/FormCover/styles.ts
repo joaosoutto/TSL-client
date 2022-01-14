@@ -3,7 +3,6 @@ import formBg from '../../assets/formBg.png';
 import media from 'styled-media-query';
 
 export const Wrapper = styled.main`
-  background-color: red;
   display: flex;
   flex-direction: column;
   align-items: center;
