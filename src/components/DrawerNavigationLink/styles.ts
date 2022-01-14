@@ -90,12 +90,12 @@ export const WrapperButton = styled.button`
 
 export const Icon = styled.div`
   ${({ theme }) => css`
-    width: 30px;
+    width: 26px;
   `}
 `;
 
 export const Label = styled.h3`
   ${({ theme }) => css`
-    font-size: ${theme.font.sizes.small};
+    font-size: ${theme.font.sizes.xxsmall};
   `}
 `;

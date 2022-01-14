@@ -4,6 +4,7 @@ export default {
     normal: 400,
     bold: 600,
     sizes: {
+      xxsmall: '16px',
       xsmall: '18px',
       small: '20px',
       medium: '22px',
