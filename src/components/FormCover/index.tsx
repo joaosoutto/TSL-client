@@ -3,11 +3,13 @@ import * as S from './styles';
 
 const FormCover = () => (
   <S.Wrapper>
-    <Logo size='huge' />
-    <S.TextWrapper>
-      <S.Text>Post, share, wall it.</S.Text>
-      <S.MinorText>welcome to the silver wall.</S.MinorText>
-    </S.TextWrapper>
+    <S.Content>
+      <Logo cover />
+      <S.TextWrapper>
+        <S.Text>Post, share, wall it.</S.Text>
+        <S.MinorText>welcome to The Silver Wall.</S.MinorText>
+      </S.TextWrapper>
+    </S.Content>
   </S.Wrapper>
 );
 

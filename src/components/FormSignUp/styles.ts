@@ -28,7 +28,7 @@ export const LogoWrapper = styled.div`
   align-self: flex-start;
   justify-self: flex-start;
   position: absolute;
-  top: 24px;
+  top: 10px;
   ${media.greaterThan('medium')`
         display: none;
     `};

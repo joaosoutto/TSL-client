@@ -17,11 +17,18 @@ export const Wrapper = styled.main`
   `};
 `;
 
+export const Content = styled.div`
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+
 export const TextWrapper = styled.div`
   ${({ theme }) => css`
     width: 360px;
     border-top: 1px solid ${theme.colors.lightGray};
-    margin-top: 24px;
+    margin-top: 36px;
     padding-top: 14px;
   `}
 `;

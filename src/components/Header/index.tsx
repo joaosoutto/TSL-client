@@ -29,7 +29,7 @@ const Header = ({ token }: HeaderProps): ReactElement => {
 
   return (
     <S.Wrapper>
-      <Logo size={media.lessThan('medium') ? 'small' : 'normal'} />
+      <Logo />
 
       {token ? (
         <>

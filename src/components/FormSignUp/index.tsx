@@ -10,7 +10,7 @@ import FormButton from '../FormButton';
 const FormSignIn = () => (
   <S.Wrapper>
     <S.LogoWrapper>
-      <Logo size='small' />
+      <Logo color='secondary' />
     </S.LogoWrapper>
     <S.Title>Create my account</S.Title>
 

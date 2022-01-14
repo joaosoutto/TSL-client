@@ -11,7 +11,7 @@ const FormSignIn = () => {
   return (
     <S.Wrapper>
       <S.LogoWrapper>
-        <Logo size='small' />
+        <Logo color='secondary' />
       </S.LogoWrapper>
       <S.Title>Access my account</S.Title>
 
