@@ -4,7 +4,7 @@ import media from 'styled-media-query';
 export const Wrapper = styled.div`
   ${({ theme }) => css`
     background-color: ${theme.colors.gray};
-    width: 140px;
+    width: 120px;
     display: flex;
     flex-direction: column;
     min-height: calc(100vh - 108px);

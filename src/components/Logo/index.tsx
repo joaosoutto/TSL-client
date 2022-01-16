@@ -9,10 +9,10 @@ export type LogoProps = {
 const Logo = ({ cover = false, color = 'primary' }: LogoProps) => {
   if (cover) {
     return (
-      <a href='/' style={{ textDecoration: 'none' }}>
+      <a href='/' style={{ textDecoration: 'none' }} data-testid='Logo'>
         <S.WrapperC color={color}>
           <S.IconC>
-            <Bricks />
+            <Bricks aria-label='Brick icon' />
           </S.IconC>
           <S.Text>
             <S.InitialsC>TSW</S.InitialsC>
@@ -23,10 +23,10 @@ const Logo = ({ cover = false, color = 'primary' }: LogoProps) => {
   }
 
   return (
-    <a href='/' style={{ textDecoration: 'none' }}>
+    <a href='/' style={{ textDecoration: 'none' }} data-testid='Logo'>
       <S.Wrapper color={color}>
         <S.Icon>
-          <Bricks />
+          <Bricks aria-label='Brick icon' />
         </S.Icon>
         <S.Text>
           <S.Initials>TSW</S.Initials>

@@ -7,7 +7,7 @@ export const Wrapper = styled.header`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 12px 50px;
+    padding: 12px 40px;
     background-color: ${theme.colors.mainBg};
     background-image: url(${headerBg});
     background-size: cover;
@@ -82,10 +82,10 @@ export const Icon = styled.div`
 export const UserDiv = styled.div`
   ${({ theme }) => css`
     display: flex;
-    margin-top: ${theme.spacings.small};
     align-items: center;
     justify-content: center;
     gap: ${theme.spacings.xsmall};
+    cursor: pointer;
     ${media.lessThan('medium')`
     display: none;
     `}

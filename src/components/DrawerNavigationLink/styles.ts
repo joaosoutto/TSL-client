@@ -89,9 +89,7 @@ export const WrapperButton = styled.button`
 `;
 
 export const Icon = styled.div`
-  ${({ theme }) => css`
-    width: 26px;
-  `}
+  width: 26px;
 `;
 
 export const Label = styled.h3`

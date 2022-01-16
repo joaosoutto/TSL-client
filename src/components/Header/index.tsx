@@ -31,7 +31,7 @@ const Header = ({ token }: HeaderProps): ReactElement => {
 
       {token ? (
         <>
-          <S.UserDiv>
+          <S.UserDiv onClick={() => history.push('/my-posts')}>
             <S.Icon>
               <User />
             </S.Icon>
