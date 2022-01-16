@@ -7,8 +7,8 @@ import { User } from '@styled-icons/boxicons-regular/User';
 import * as S from './styles';
 import FormButton from '../FormButton';
 
-const FormSignIn = () => (
-  <S.Wrapper>
+const FormSignUp = () => (
+  <S.Wrapper data-testid='sign-up'>
     <S.LogoWrapper>
       <Logo color='secondary' />
     </S.LogoWrapper>
@@ -51,4 +51,4 @@ const FormSignIn = () => (
   </S.Wrapper>
 );
 
-export default FormSignIn;
+export default FormSignUp;

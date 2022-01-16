@@ -9,7 +9,7 @@ import FormButton from '../FormButton';
 
 const FormSignIn = () => {
   return (
-    <S.Wrapper>
+    <S.Wrapper data-testid='sign-in'>
       <S.LogoWrapper>
         <Logo color='secondary' />
       </S.LogoWrapper>
