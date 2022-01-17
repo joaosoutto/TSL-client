@@ -69,8 +69,9 @@ export const OwnerDiv = styled.div`
     height: 40px;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     padding: ${theme.spacings.large};
+    padding-right: ${theme.spacings.xsmall};
     box-shadow: 0px -1px 9px 2px rgba(0, 0, 0, 0.3);
   `}
 `;
@@ -79,6 +80,51 @@ export const Owner = styled.h4`
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.xxsmall};
     font-weight: ${theme.font.bold};
-    color: ${theme.colors.primary};
+    color: ${theme.colors.gray};
+    justify-self: flex-end;
+    > span {
+      color: ${theme.colors.primary};
+    }
+  `}
+`;
+
+export const Icons = styled.div`
+  gap: 10px;
+  display: flex;
+  align-items: center;
+`;
+
+export const Delete = styled.button`
+  ${({ theme }) => css`
+    width: 24px;
+    background-color: transparent;
+    border: none;
+    color: ${theme.colors.red};
+    cursor: pointer;
+    transition: all 0.1s;
+    border-radius: 50%;
+
+    &:hover {
+      background-color: ${theme.colors.lightGray};
+      border-radius: 50%;
+    }
+  `}
+`;
+
+export const Edit = styled.button`
+  ${({ theme }) => css`
+    width: 24px;
+    background-color: transparent;
+    border: none;
+    margin-top: 4px;
+    color: ${theme.colors.lightBlue};
+    cursor: pointer;
+    transition: all 0.1s;
+    border-radius: 50%;
+
+    &:hover {
+      background-color: ${theme.colors.lightGray};
+      border-radius: 50%;
+    }
   `}
 `;
