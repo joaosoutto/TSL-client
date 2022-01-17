@@ -1,4 +1,4 @@
-import { FormEvent, useContext, useState } from 'react';
+import { FormEvent, useState } from 'react';
 
 import { Lock, Email } from '@styled-icons/material-outlined';
 import { User } from '@styled-icons/boxicons-regular/User';
@@ -7,19 +7,18 @@ import FormTextField from '../FormTextField';
 import FormButton from '../FormButton';
 import Logo from '../Logo';
 
-import { AppContext } from '../../context/AppContext';
 import Api from '../../services/Api';
 
 import * as S from './styles';
 
 const FormSignUp = () => {
-  const { loading, setLoading } = useContext(AppContext);
   const [email, setEmail] = useState('');
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [success, setSuccess] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const resetForm = () => {
     setEmail('');
