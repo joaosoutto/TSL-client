@@ -3,6 +3,8 @@ import { useContext, useEffect, useState } from 'react';
 import getToken from '../../services/getToken';
 
 import Layout from '../../components/Layout';
+import Loading from '../../components/Loading';
+
 import NewPostButton from '../../components/NewPostButton';
 import { AppContext } from '../../context/AppContext';
 
@@ -17,7 +19,7 @@ const Home = () => {
 
   return (
     <Layout>
-      <h1>Home</h1>
+      <Loading />
       {token ? <NewPostButton /> : null}
     </Layout>
   );
