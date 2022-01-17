@@ -12,9 +12,19 @@ type loginPayload = {
   password: string;
 };
 
+const token = localStorage.getItem('token');
+
 const Api = {
   async getPosts() {
     const response = await axios.get(`${API_BASE_URL}posts/`);
+
+    return response.data;
+  },
+
+  async getMyPosts() {
+    const response = await axios.get(`${API_BASE_URL}posts/my-posts/`, {
+      headers: { Authorization: `Token ${token}` },
+    });
 
     return response.data;
   },

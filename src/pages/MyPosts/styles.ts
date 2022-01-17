@@ -9,10 +9,10 @@ export const Wrapper = styled.div`
     padding: 0 ${theme.spacings.xxlarge};
     padding-bottom: ${theme.spacings.xlarge};
     ${media.lessThan('medium')`
-    grid-template-columns: 1fr;
-    padding: 0 ${theme.spacings.xlarge};
-    padding-bottom: ${theme.spacings.huge};
-    gap: 40px;
+      grid-template-columns: 1fr;
+      padding: 0 ${theme.spacings.xlarge};
+      padding-bottom: ${theme.spacings.huge};
+      gap: 40px;
     `};
   `}
 `;
