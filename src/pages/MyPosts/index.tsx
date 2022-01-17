@@ -9,6 +9,8 @@ import NewPostButton from '../../components/NewPostButton';
 import Api from '../../services/Api';
 import * as S from './styles';
 
+import noPosts from '../../assets/noPosts.png';
+
 const MyPosts = (): ReactElement => {
   const { loading, setLoading } = useContext(AppContext);
   const [myPosts, setMyPosts] = useState([]);
@@ -27,6 +29,17 @@ const MyPosts = (): ReactElement => {
     return (
       <Layout>
         <Loading />
+      </Layout>
+    );
+
+  if (myPosts.length === 0)
+    return (
+      <Layout>
+        <S.NoPosts>
+          <S.Img alt='A broken wall' src={noPosts} />
+          <S.Text>You dont have any posts yet.</S.Text>
+        </S.NoPosts>
+        <NewPostButton />
       </Layout>
     );
 

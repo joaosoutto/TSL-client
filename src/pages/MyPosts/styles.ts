@@ -16,3 +16,34 @@ export const Wrapper = styled.div`
     `};
   `}
 `;
+
+export const NoPosts = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding-top: 20px;
+  ${media.lessThan('medium')`
+    padding-top: 140px;
+    width: 80%;
+    margin: 0 auto;
+  `};
+`;
+
+export const Img = styled.img`
+  width: 300px;
+  ${media.lessThan('medium')`
+    width: 200px;
+  `};
+`;
+
+export const Text = styled.h3`
+  ${({ theme }) => css`
+    color: ${theme.colors.darkGray};
+    font-size: ${theme.font.sizes.xxlarge};
+    ${media.lessThan('medium')`
+      font-size: ${theme.font.sizes.xlarge};
+    `};
+  `}
+`;
