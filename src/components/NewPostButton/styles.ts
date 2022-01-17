@@ -9,7 +9,7 @@ export const Wrapper = styled.button`
     width: 160px;
     position: absolute;
     bottom: 26px;
-    right: 26px;
+    right: 30px;
     padding: ${theme.spacings.small};
     border-radius: 4px;
     border: none;

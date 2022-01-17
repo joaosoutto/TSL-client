@@ -36,5 +36,6 @@ export default {
     large: '20px',
     xlarge: '34px',
     xxlarge: '50px',
+    huge: '80px',
   },
 } as const;

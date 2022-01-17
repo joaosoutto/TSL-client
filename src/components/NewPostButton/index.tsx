@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, useState } from 'react';
+import { ButtonHTMLAttributes } from 'react';
 import { CommentAdd } from '@styled-icons/boxicons-solid/CommentAdd';
 
 import * as S from './styles';
@@ -9,10 +9,8 @@ const NewPostButton: React.ForwardRefRenderFunction<NewPostButtonTypes> = ({
   children,
   ...props
 }) => {
-  const [open, setOpen] = useState(false);
-
   return (
-    <S.Wrapper onClick={() => setOpen(true)} {...props}>
+    <S.Wrapper onClick={() => {}} {...props}>
       new post <CommentAdd />
     </S.Wrapper>
   );
