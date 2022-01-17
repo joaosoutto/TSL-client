@@ -36,12 +36,12 @@ const PostCard = ({ title, owner, post, id }: PostCardProps) => {
         </S.Owner>
         {owner === username ? (
           <S.Icons>
-            <S.Edit>
-              <Edit />
-            </S.Edit>
             <S.Delete>
               <Delete />
             </S.Delete>
+            <S.Edit>
+              <Edit />
+            </S.Edit>
           </S.Icons>
         ) : null}
       </S.OwnerDiv>

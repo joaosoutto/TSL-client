@@ -70,8 +70,8 @@ export const OwnerDiv = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: ${theme.spacings.large};
-    padding-right: ${theme.spacings.xsmall};
+    flex-direction: row-reverse;
+    padding: ${theme.spacings.small};
     box-shadow: 0px -1px 9px 2px rgba(0, 0, 0, 0.3);
   `}
 `;
@@ -89,7 +89,7 @@ export const Owner = styled.h4`
 `;
 
 export const Icons = styled.div`
-  gap: 10px;
+  gap: 8px;
   display: flex;
   align-items: center;
 `;
