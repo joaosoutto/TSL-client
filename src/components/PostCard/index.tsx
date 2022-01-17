@@ -4,6 +4,8 @@ import * as S from './styles';
 import { Delete } from '@styled-icons/fluentui-system-filled/Delete';
 import { Edit } from '@styled-icons/boxicons-regular/Edit';
 
+import DeleteModal from '../DeleteModal';
+
 export type PostCardProps = {
   title?: string;
   owner: string;
@@ -13,6 +15,7 @@ export type PostCardProps = {
 
 const PostCard = ({ title, owner, post, id }: PostCardProps) => {
   const [username, setUsername] = useState('');
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const user = localStorage.getItem('username');
@@ -36,7 +39,7 @@ const PostCard = ({ title, owner, post, id }: PostCardProps) => {
         </S.Owner>
         {owner === username ? (
           <S.Icons>
-            <S.Delete>
+            <S.Delete onClick={() => setOpen(true)}>
               <Delete />
             </S.Delete>
             <S.Edit>
@@ -45,6 +48,7 @@ const PostCard = ({ title, owner, post, id }: PostCardProps) => {
           </S.Icons>
         ) : null}
       </S.OwnerDiv>
+      <DeleteModal id={id} open={open} setOpen={setOpen} />
     </S.Wrapper>
   );
 };
