@@ -11,16 +11,18 @@ import { Close } from '@styled-icons/material-outlined/Close';
 
 export type HeaderProps = {
   token: string;
+  username: string;
 };
 
-const Header = ({ token }: HeaderProps): ReactElement => {
+const Header = ({ token, username }: HeaderProps): ReactElement => {
   const history = useHistory();
 
   const [isOpen, setIsOpen] = useState(false);
-  const username = 'TokenTest';
 
   const logout = (): void => {
     localStorage.removeItem('token');
+    localStorage.removeItem('username');
+
     history.push('/');
     history.go(0);
   };

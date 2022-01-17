@@ -7,6 +7,11 @@ type createUserPayload = {
   password: string;
 };
 
+type loginPayload = {
+  username: string;
+  password: string;
+};
+
 const Api = {
   async getPosts() {
     const response = await axios.get(`${API_BASE_URL}posts/`);
@@ -16,7 +21,14 @@ const Api = {
 
   async createUser(payload: createUserPayload) {
     const response = await axios.post(`${API_BASE_URL}users/`, payload);
-    console.log(response);
+    return response;
+  },
+
+  async login(payload: loginPayload) {
+    const response = await axios.post(
+      `${API_BASE_URL}api-token-auth/`,
+      payload
+    );
     return response;
   },
 };

@@ -19,6 +19,8 @@ const Drawer = ({ token }: DrawerProps): ReactElement => {
 
   const logout = (): void => {
     localStorage.removeItem('token');
+    localStorage.removeItem('username');
+
     history.push('/');
     history.go(0);
   };

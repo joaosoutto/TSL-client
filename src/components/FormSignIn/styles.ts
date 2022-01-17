@@ -93,3 +93,11 @@ export const SignUp = styled.p`
 `;
 
 export const SignUpLink = styled.a``;
+
+export const Error = styled.p`
+  ${({ theme }) => css`
+    color: ${theme.colors.red};
+    font-size: ${theme.font.sizes.xxsmall};
+    margin-bottom: ${theme.spacings.small};
+  `}
+`;

@@ -7,18 +7,24 @@ const AppContext = createContext();
 const AppProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const [posts, setPosts] = useState([]);
+  const [user, setUser] = useState('');
 
-  useEffect(async () => {
-    setLoading(true);
-    const results = await Api.getPosts();
-    setPosts(results);
-    setLoading(false);
+  useEffect(() => {
+    const getPosts = async () => {
+      setLoading(true);
+      const results = await Api.getPosts();
+      setPosts(results);
+      setLoading(false);
+    };
+    getPosts();
   }, []);
 
   const context = {
     loading,
     setLoading,
     posts,
+    user,
+    setUser,
   };
 
   return <AppContext.Provider value={context}>{children}</AppContext.Provider>;
