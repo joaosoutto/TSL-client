@@ -7,7 +7,6 @@ export const Wrapper = styled.div`
     flex-direction: column;
     width: 100%;
     background-color: ${theme.colors.white};
-    // border: 2px solid green;
     max-height: 300px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
       rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
@@ -47,18 +46,12 @@ export const Content = styled.div`
     flex-direction: column;
     justify-content: center;
     height: 100%;
-    // background-color: gray;
     margin: ${theme.spacings.large} ${theme.spacings.medium};
-    // padding: ${theme.spacings.large};
-    overflow: auto;
-    // max-height: 300px;
     height: 150px;
     align-items: center;
     ${media.lessThan('medium')`
-    height: 100px;
-
-
-  `};
+      height: 100px;
+    `};
   `}
 `;
 export const Post = styled.p`
@@ -66,6 +59,8 @@ export const Post = styled.p`
     font-size: ${theme.font.sizes.xxsmall};
     font-weight: ${theme.font.bold};
     color: ${theme.colors.darkGray};
+    overflow: auto;
+    padding: ${theme.spacings.xsmall} 0;
   `}
 `;
 
@@ -76,10 +71,10 @@ export const OwnerDiv = styled.div`
     align-items: center;
     justify-content: flex-end;
     padding: ${theme.spacings.large};
-    // background-color: ${theme.colors.mainBg};
     box-shadow: 0px -1px 9px 2px rgba(0, 0, 0, 0.3);
   `}
 `;
+
 export const Owner = styled.h4`
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.xxsmall};
