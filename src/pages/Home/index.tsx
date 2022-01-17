@@ -1,9 +1,24 @@
-import Layout from '../../components/Layout';
+import { useEffect, useState } from 'react';
 
-const Home = () => (
-  <Layout>
-    <h1>Home</h1>
-  </Layout>
-);
+import getToken from '../../services/getToken';
+
+import Layout from '../../components/Layout';
+import NewPostButton from '../../components/NewPostButton';
+
+const Home = () => {
+  const [token, setToken] = useState('');
+
+  useEffect(() => {
+    const userToken = getToken();
+    setToken(userToken);
+  }, []);
+
+  return (
+    <Layout>
+      <h1>Home</h1>
+      {token ? <NewPostButton /> : null}
+    </Layout>
+  );
+};
 
 export default Home;
