@@ -48,7 +48,7 @@ export const Title = styled.h3`
 `;
 
 export const Space = styled.div`
-  padding: 20px 0;
+  padding: 10px 0;
 `;
 
 export const SignUp = styled.p`
@@ -86,3 +86,27 @@ export const SignUp = styled.p`
 `;
 
 export const SignUpLink = styled.a``;
+
+export const Error = styled.a`
+  ${({ theme }) => css`
+    color: ${theme.colors.red};
+    font-size: ${theme.font.sizes.xxsmall};
+    margin-bottom: ${theme.spacings.small};
+  `}
+`;
+
+export const Success = styled.a`
+  ${({ theme }) => css`
+    color: #2e8a29;
+    font-size: ${theme.font.sizes.xxsmall};
+    margin-bottom: ${theme.spacings.small};
+  `}
+`;
+
+export const Loading = styled.a`
+  ${({ theme }) => css`
+    color: ${theme.colors.gray};
+    font-size: ${theme.font.sizes.xxsmall};
+    margin-bottom: ${theme.spacings.small};
+  `}
+`;
