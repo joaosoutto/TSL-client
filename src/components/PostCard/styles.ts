@@ -26,7 +26,7 @@ export const TitleDiv = styled.div`
 
 export const Title = styled.h3`
   ${({ theme }) => css`
-    font-size: ${theme.font.sizes.xsmall};
+    font-size: ${theme.font.sizes.xxsmall};
     line-height: ${theme.font.sizes.medium};
     font-weight: ${theme.font.bold};
     color: ${theme.colors.lightGray};
@@ -35,7 +35,7 @@ export const Title = styled.h3`
 
 export const Id = styled.h3`
   ${({ theme }) => css`
-    font-size: ${theme.font.sizes.xsmall};
+    font-size: ${theme.font.sizes.xxsmall};
     color: ${theme.colors.primary};
   `}
 `;
@@ -46,8 +46,8 @@ export const Content = styled.div`
     flex-direction: column;
     justify-content: center;
     height: 100%;
-    margin: ${theme.spacings.large} ${theme.spacings.medium};
-    height: 150px;
+    margin: ${theme.spacings.medium} ${theme.spacings.small};
+    height: 140px;
     align-items: center;
     ${media.lessThan('medium')`
       height: 100px;
