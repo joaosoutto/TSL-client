@@ -9,6 +9,8 @@ import Loading from '../../components/Loading';
 import PostCard from '../../components/PostCard';
 import NewPostButton from '../../components/NewPostButton';
 
+import page404 from '../../assets/page404.png';
+
 const Home = () => {
   const { posts, loading } = useContext(AppContext);
   const [token, setToken] = useState('');
@@ -22,6 +24,24 @@ const Home = () => {
     return (
       <Layout>
         <Loading />
+      </Layout>
+    );
+
+  if (posts.length === 0)
+    return (
+      <Layout>
+        <S.NoPostWrapper>
+          <S.Text>No posts yet!</S.Text>
+          {token ? (
+            <S.Text>Won't you be the first?</S.Text>
+          ) : (
+            <S.Text>Sign in now and be the first!</S.Text>
+          )}
+
+          <S.Divider />
+          <S.Figure src={page404} alt='A broken wall' />
+        </S.NoPostWrapper>
+        {token ? <NewPostButton /> : null}
       </Layout>
     );
 
