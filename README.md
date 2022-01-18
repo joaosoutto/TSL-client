@@ -45,6 +45,7 @@ git clone https://github.com/joaosoutto/TSL-client.git
 cd TSL-client
 ```
 
+<<<<<<< HEAD
 3. Install dependencies:
 
 ```bash
@@ -69,3 +70,10 @@ npm start
 
 - <a href="https://drive.google.com/file/d/1u4XyE7j-9flIde2n65DO-x7UE2raEaH2/view?usp=sharing" target="_blank">Web Version</a>
 - <a href="https://drive.google.com/file/d/1UtA4XS0cCIjcPCbdPfLjLhfG3GPtm_16/view?usp=sharing" target="_blank">Mobile Version</a>
+=======
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+Mobile: https://drive.google.com/file/d/1UtA4XS0cCIjcPCbdPfLjLhfG3GPtm_16/view?usp=sharing
+Web: https://drive.google.com/file/d/1u4XyE7j-9flIde2n65DO-x7UE2raEaH2/view?usp=sharing
+
+>>>>>>> 7b9c273bc52e40e55e1a852fdc64ee7a437e5181
