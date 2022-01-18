@@ -28,23 +28,23 @@ const Header = ({ token, username }: HeaderProps): ReactElement => {
   };
 
   return (
-    <S.Wrapper>
+    <S.Wrapper data-testid='Header'>
       <Logo />
 
       {token ? (
         <>
           <S.UserDiv onClick={() => history.push('/my-posts')}>
             <S.Icon>
-              <User />
+              <User aria-label='User icon' />
             </S.Icon>
-            <S.User>{username}</S.User>
+            <S.User data-testid='Username'>{username}</S.User>
           </S.UserDiv>
           <S.IconWrapper onClick={() => setIsOpen(true)}>
             <Menu aria-label='Open Menu' />
           </S.IconWrapper>
         </>
       ) : (
-        <S.Nav href='sign-in'>
+        <S.Nav data-testid='Sign in link' href='/sign-in'>
           <S.Text>Login</S.Text>
           <S.Icon>
             <Login aria-label='Login' />
@@ -62,7 +62,7 @@ const Header = ({ token, username }: HeaderProps): ReactElement => {
         </S.UserNav>
         <S.MenuNav>
           <S.MenuLink href='/'>Home</S.MenuLink>
-          <S.MenuLink href='my-posts'>My Posts</S.MenuLink>
+          <S.MenuLink href='/my-posts'>My Posts</S.MenuLink>
         </S.MenuNav>
         <S.Logout>
           <S.LogoutButton onClick={() => logout()}>

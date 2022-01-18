@@ -1,4 +1,3 @@
-// Helper to use theme on tests files
 import { ThemeProvider } from 'styled-components';
 import { render, RenderResult } from '@testing-library/react';
 

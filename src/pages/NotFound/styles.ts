@@ -12,8 +12,8 @@ export const Wrapper = styled.div`
   height: 70vh;
   padding-top: 40px;
   ${media.lessThan('medium')`
-      width: 80%;
-    `};
+    width: 80%;
+  `};
 `;
 
 export const Divider = styled.div`

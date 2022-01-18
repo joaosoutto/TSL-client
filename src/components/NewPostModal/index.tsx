@@ -70,10 +70,10 @@ const NewPostModal = ({ open, setOpen }: NewPostModalProps): ReactElement => {
   };
 
   return (
-    <Dialog open={open} onClose={handleClose}>
+    <Dialog data-testid='New post modal' open={open} onClose={handleClose}>
       <DialogTitle style={modalTitleStyles}>
         <S.Title>
-          <CommentAdd />
+          <CommentAdd aria-label='New post icon' />
           New post
         </S.Title>
       </DialogTitle>
@@ -96,8 +96,10 @@ const NewPostModal = ({ open, setOpen }: NewPostModalProps): ReactElement => {
         {errorMessage && <S.Error>{errorMessage}</S.Error>}
       </DialogContent>
       <DialogActions style={modalActionsStyles}>
-        <S.Cancel onClick={handleClose}>cancel</S.Cancel>{' '}
-        <S.Post disabled={posting} onClick={newPost}>
+        <S.Cancel aria-label='Cancel button' onClick={handleClose}>
+          cancel
+        </S.Cancel>{' '}
+        <S.Post aria-label='Post button' disabled={posting} onClick={newPost}>
           post
         </S.Post>
       </DialogActions>

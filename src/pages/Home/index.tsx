@@ -44,7 +44,6 @@ const Home = () => {
             />
           )
         )}
-
         {token ? <NewPostButton /> : null}
       </S.Wrapper>
     </Layout>

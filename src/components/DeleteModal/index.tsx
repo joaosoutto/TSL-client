@@ -42,10 +42,10 @@ const DeleteModal = ({ open, setOpen, id }: DeleteModalProps): ReactElement => {
   };
 
   return (
-    <Dialog open={open} onClose={handleClose}>
+    <Dialog data-testid='Delete modal' open={open} onClose={handleClose}>
       <DialogTitle style={modalTitleStyles}>
         <S.Title>
-          <DeleteForever />
+          <DeleteForever aria-label='delete icon' />
           Warning!
         </S.Title>
       </DialogTitle>
@@ -53,8 +53,14 @@ const DeleteModal = ({ open, setOpen, id }: DeleteModalProps): ReactElement => {
         <S.Message>Are you sure you want to delete the post?</S.Message>
       </DialogContent>
       <DialogActions style={modalActionsStyles}>
-        <S.Cancel onClick={handleClose}>cancel</S.Cancel>{' '}
-        <S.Delete disabled={deleting} onClick={deletePost}>
+        <S.Cancel aria-label='cancel button' onClick={handleClose}>
+          cancel
+        </S.Cancel>{' '}
+        <S.Delete
+          aria-label='delete button'
+          disabled={deleting}
+          onClick={deletePost}
+        >
           delete
         </S.Delete>
       </DialogActions>

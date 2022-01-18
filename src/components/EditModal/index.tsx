@@ -79,24 +79,11 @@ const EditModal = ({
     checkBody();
   };
 
-  // const deletePost = async () => {
-  //   setDeleting(true);
-  //   try {
-  //     await Api.deletePost(id);
-  //     setDeleting(false);
-  //     setOpen(false);
-  //     history.push('/');
-  //     history.go(0);
-  //   } catch (e) {
-  //     console.log('Error');
-  //   }
-  // };
-
   return (
-    <Dialog open={open} onClose={handleClose}>
+    <Dialog data-testid='Edit modal' open={open} onClose={handleClose}>
       <DialogTitle style={modalTitleStyles}>
         <S.Title>
-          <Edit />
+          <Edit aria-label='edit icon' />
           Edit post
         </S.Title>
       </DialogTitle>
@@ -106,6 +93,7 @@ const EditModal = ({
           name='title'
           onChange={(e) => setNewTitle(e.target.value)}
           label='Title'
+          data-testid='Title input'
         />
         <TextField
           value={newBody}
@@ -113,12 +101,15 @@ const EditModal = ({
           onChange={(e) => setNewBody(e.target.value)}
           area
           label='Post'
+          data-testid='Post input'
         />
         {errorMessage && <S.Error>{errorMessage}</S.Error>}
       </DialogContent>
       <DialogActions style={modalActionsStyles}>
-        <S.Cancel onClick={handleClose}>cancel</S.Cancel>{' '}
-        <S.Edit disabled={editing} onClick={editPost}>
+        <S.Cancel aria-label='cancel button' onClick={handleClose}>
+          cancel
+        </S.Cancel>{' '}
+        <S.Edit aria-label='edit button' disabled={editing} onClick={editPost}>
           edit
         </S.Edit>
       </DialogActions>

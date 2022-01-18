@@ -29,7 +29,7 @@ const PostCard = ({ title, owner, post, id }: PostCardProps) => {
   return (
     <S.Wrapper data-testid='post card'>
       <S.TitleDiv>
-        <S.Title>{title || `${username}'s post`}</S.Title>
+        <S.Title>{title || `${owner}'s post`}</S.Title>
         <S.Id>#{id}</S.Id>
       </S.TitleDiv>
       <S.Content>

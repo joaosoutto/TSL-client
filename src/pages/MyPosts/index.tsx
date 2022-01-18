@@ -62,7 +62,6 @@ const MyPosts = (): ReactElement => {
             />
           )
         )}
-
         <NewPostButton />
       </S.Wrapper>
     </Layout>

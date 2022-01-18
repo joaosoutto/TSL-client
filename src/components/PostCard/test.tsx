@@ -45,14 +45,7 @@ describe('<PostCard />', () => {
     );
 
     expect(
-      screen.getByRole('heading', { name: /Post title/i })
+      screen.getByRole('heading', { name: /mock_owner's post/i })
     ).toBeInTheDocument();
-    expect(
-      screen.getByRole('heading', { name: /mock_owner/i })
-    ).toBeInTheDocument();
-    expect(
-      screen.getByRole('heading', { name: /mock_id/i })
-    ).toBeInTheDocument();
-    expect(screen.getByText(/mock_post/i)).toBeInTheDocument();
   });
 });

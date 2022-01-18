@@ -40,6 +40,14 @@ const Api = {
     return response.data;
   },
 
+  async newPost(payload: newPostPayload) {
+    const response = await axios.post(`${API_BASE_URL}posts/`, payload, {
+      headers: { Authorization: `Token ${token}` },
+    });
+
+    return response.data;
+  },
+
   async deletePost(id: string) {
     const response = await axios.delete(`${API_BASE_URL}posts/${id}/`, {
       headers: { Authorization: `Token ${token}` },
@@ -56,14 +64,6 @@ const Api = {
         headers: { Authorization: `Token ${token}` },
       }
     );
-
-    return response.data;
-  },
-
-  async newPost(payload: newPostPayload) {
-    const response = await axios.post(`${API_BASE_URL}posts/`, payload, {
-      headers: { Authorization: `Token ${token}` },
-    });
 
     return response.data;
   },
