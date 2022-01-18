@@ -1,46 +1,71 @@
-# Getting Started with Create React App
+# Welcome to The Silver Wall - Client
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 style="margin-top: 40px;">About</h1>
 
-## Available Scripts
+This is an application where users can create their accounts, login and post on the wall. Once logged in, users can delete and edit their posts. They also have an area with their posts for ease of maintenance.
 
-In the project directory, you can run:
+Visitors (users without accounts) can also view the posts, not being able to create, delete or edit them
 
-### `npm start`
+<h2 style="margin-top: 40px;">Built with</h2>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- <p style="display:flex;align-items:center;gap:6px;">React <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" style="margin-top:6px;" width="20" height="20"/> </a> </p>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- <p style="display:flex;align-items:center;gap:6px;">TypeScript <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg" alt="typeScript" style="margin-top:6px;" width="20" height="20"/> </a> </p>
 
-### `npm test`
+- <p style="display:flex;align-items:center;gap:6px;">Styled Components <a href="https://styled-components.com/" target="_blank" rel="noreferrer"> <img src="https://miro.medium.com/max/318/1*7jRD5QhgARucFKvRHFxpOg.png" alt="react" style="margin-top:6px;" width="20" height="20"/> </a> </p>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- <p style="display:flex;align-items:center;gap:6px;">MaterialUI <a href="https://mui.com/" target="_blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg" alt="MaterialUI" style="margin-top:6px;" width="20" height="20"/> </a> </p>
 
-### `npm run build`
+- <p style="display:flex;align-items:center;gap:6px;">Jest <a href="https://jestjs.io/" target="_blank" rel="noreferrer"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" alt="react" style="margin-top:6px;" width="20" height="20"/> </a> </p>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- <p style="display:flex;align-items:center;gap:6px;">RTL <a href="https://testing-library.com/docs/react-testing-library/intro/" target="_blank" rel="noreferrer"> <img src="https://testing-library.com/img/octopus-128x128.png" alt="React Testing Library" style="margin-top:6px;" width="20" height="20"/> </a> </p>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- <p style="display:flex;align-items:center;gap:6px;">Axios <a href="https://axios-http.com/docs/intro" target="_blank" rel="noreferrer"> <img src="https://avatars.githubusercontent.com/u/32372333?s=280&v=4" alt="react" style="margin-top:6px;" width="20" height="20"/> </a> </p>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- <a href="https://www.npmjs.com/package/plop" target="_blank" rel="noreferrer"><p style="display:flex;align-items:center;gap:6px;">Plop</p></a>
 
-### `npm run eject`
+<h1 style="margin-top: 40px;">Requirements</h1>
+<p style="font-style:italic;">Please note that this project was developed in javascript, so you must have NodeJS installed on your machine to run it. If you don't have it, download it now from the <a href="https://nodejs.org/en/" target="_blank" rel="noreferrer">official Node website</a>.</p>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<h1 style="margin-top: 40px;">Getting Started</h1>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone repo:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```bash
+# SSH
+git clone git@github.com:joaosoutto/TSL-client.git
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+# HTTPS
+git clone https://github.com/joaosoutto/TSL-client.git
+```
 
-## Learn More
+2. Enter in project folder:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+cd TSL-client
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. Install dependencies:
+
+```bash
+npm install
+```
+
+4. Then, run the project:
+
+```bash
+npm start
+```
+
+5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+<h2 style="margin-top: 60px;">Possible commands</h2>
+
+- `npm start`: runs your application on `localhost:3000`;
+- `npm test`: runs jest to test all components;
+- `npm run generate`: create new component and default archives for it (using plop)
+
+<h1 style="margin-top: 40px;">Demos</h1>
+
+- <a href="https://drive.google.com/file/d/1u4XyE7j-9flIde2n65DO-x7UE2raEaH2/view?usp=sharing" target="_blank">Web Version</a>
+- <a href="https://drive.google.com/file/d/1UtA4XS0cCIjcPCbdPfLjLhfG3GPtm_16/view?usp=sharing" target="_blank">Mobile Version</a>

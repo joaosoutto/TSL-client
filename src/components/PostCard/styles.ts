@@ -21,6 +21,7 @@ export const TitleDiv = styled.div`
     justify-content: space-between;
     padding: ${theme.spacings.medium};
     background-color: ${theme.colors.mainBg};
+    box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.54);
   `}
 `;
 
