@@ -4,8 +4,8 @@ import './App.css';
 
 import { AppProvider } from './context/AppContext';
 import Home from './pages/Home';
-import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
+import SignIn from './pages/SignIn';
 import MyPosts from './pages/MyPosts';
 import NotFound from './pages/NotFound';
 
