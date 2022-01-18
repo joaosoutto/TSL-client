@@ -2,13 +2,13 @@
 ![TSL](https://user-images.githubusercontent.com/60697947/150019275-62dc0dcc-c846-45bf-9e6b-4497f78b2b94.png)
 
 
-#About
+# About
 
 _This is an application where users can create their accounts, login and post on the wall. Once logged in, users can delete and edit their posts. They also have an area with their posts for ease of maintenance._
 
 _Visitors (users without accounts) can also view the posts, not being able to create, delete or edit them._
 
-##Built with
+## Built with
 
 - <p style="display:flex;align-items:center;gap:6px;">React <a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" style="margin-top:6px;" width="20" height="20"/> </a> </p>
 
@@ -28,9 +28,9 @@ _Visitors (users without accounts) can also view the posts, not being able to cr
 
 <h1 style="margin-top: 40px;">Requirements</h1>
 
-- Please note that this project was developed in javascript, so you must have NodeJS installed on your machine to run it. If you don't have it, download it now from the <a href="https://nodejs.org/en/" target="_blank" rel="noreferrer">official Node website</a>.
+- _Please note that this project was developed in javascript, so you must have NodeJS installed on your machine to run it. If you don't have it, download it now from the <a href="https://nodejs.org/en/" target="_blank" rel="noreferrer">official Node website</a>.
 
-- You will also need The Silver Wall - API running on your machine! Access it <a href="https://github.com/joaosoutto/TSL-api" target="_blank" rel="noreferrer">here</a>.
+- _You will also need The Silver Wall - API running on your machine, otherwise your application will be in an eternal loading! But don't worry, you can access it <a href="https://github.com/joaosoutto/TSL-api" target="_blank" rel="noreferrer">here</a>.
 
 <h1 style="margin-top: 40px;">Getting Started</h1>
 
