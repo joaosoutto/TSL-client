@@ -66,11 +66,11 @@ export default DeleteModal;
 
 const modalTitleStyles = {
   background: '#06092B',
-  width: '500px',
+  width: '600px',
 };
 
 const modalContentStyles = {
-  height: '80px',
+  height: '100px',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
@@ -78,7 +78,7 @@ const modalContentStyles = {
 };
 
 const modalActionsStyles = {
-  height: '50px',
+  height: '60px',
   display: 'flex',
   alignItems: 'center',
   gap: '8px',

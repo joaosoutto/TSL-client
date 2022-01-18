@@ -12,6 +12,12 @@ type loginPayload = {
   password: string;
 };
 
+type editPayload = {
+  title: string | undefined;
+  body: string;
+  id: string;
+};
+
 const token = localStorage.getItem('token');
 
 const Api = {
@@ -33,6 +39,18 @@ const Api = {
     const response = await axios.delete(`${API_BASE_URL}posts/${id}/`, {
       headers: { Authorization: `Token ${token}` },
     });
+
+    return response.data;
+  },
+
+  async editPost(payload: editPayload) {
+    const response = await axios.put(
+      `${API_BASE_URL}posts/${payload.id}/`,
+      payload,
+      {
+        headers: { Authorization: `Token ${token}` },
+      }
+    );
 
     return response.data;
   },

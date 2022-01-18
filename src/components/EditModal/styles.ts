@@ -11,20 +11,9 @@ export const Title = styled.h3`
 
     > svg {
       width: 30px;
-      color: ${theme.colors.red};
+      color: ${theme.colors.lightBlue};
       margin-bottom: 4px;
     }
-  `}
-`;
-
-export const Message = styled.p`
-  ${({ theme }) => css`
-    font-size: ${theme.font.sizes.medium};
-    color: ${theme.colors.darkGray};
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   `}
 `;
 
@@ -38,19 +27,27 @@ export const Cancel = styled.button`
   `}
 `;
 
-export const Delete = styled.button`
+export const Edit = styled.button`
   ${({ theme }) => css`
     font-size: ${theme.font.sizes.medium};
     color: ${theme.colors.lightGray};
     border: none;
-    background-color: ${theme.colors.red};
+    background-color: ${theme.colors.lightBlue};
     padding: ${theme.spacings.xxsmall} ${theme.spacings.medium};
     border-radius: 10px;
     cursor: pointer;
-    transition: all 0.2s;
     font-weight: ${theme.font.bold};
+    transition: all 0.2s;
     &:hover {
-      background-color: #f53e1d;
+      background-color: #1bb1be;
     }
+  `}
+`;
+
+export const Error = styled.p`
+  ${({ theme }) => css`
+    font-size: ${theme.font.sizes.small};
+    color: ${theme.colors.red};
+    margin-bottom: 24px;
   `}
 `;
