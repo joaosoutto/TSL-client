@@ -30,7 +30,7 @@ _Visitors (users without accounts) can also view the posts, not being able to cr
 
 - Please note that this project was developed in javascript, so you must have NodeJS installed on your machine to run it. If you don't have it, download it now from the <a href="https://nodejs.org/en/" target="_blank" rel="noreferrer">official Node website</a>.
 
-- You will also need The Silver Wall - API running on your machine! <a href="https://github.com/joaosoutto/TSL-api" target="_blank" rel="noreferrer">Access it here!</a>
+- You will also need The Silver Wall - API running on your machine! Access it <a href="https://github.com/joaosoutto/TSL-api" target="_blank" rel="noreferrer">here</a>.
 
 <h1 style="margin-top: 40px;">Getting Started</h1>
 
