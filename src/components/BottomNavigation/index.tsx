@@ -1,4 +1,4 @@
-import { ReactElement } from 'react';
+import { ReactElement, useState } from 'react';
 
 import * as S from './styles';
 import { Home, Login } from '@styled-icons/material';
@@ -6,12 +6,14 @@ import { User } from '@styled-icons/boxicons-solid/User';
 import { CommentAdd } from '@styled-icons/boxicons-solid/CommentAdd';
 
 import BottomNavigationLink from '../BottomNavigationLink';
+import NewPostModal from '../NewPostModal';
 
 export type BottomNavigationProps = {
   token: string;
 };
 
 const BottomNavigation = ({ token }: BottomNavigationProps): ReactElement => {
+  const [open, setOpen] = useState(false);
   return (
     <S.Wrapper data-testid='wrapper'>
       {token ? (
@@ -21,7 +23,7 @@ const BottomNavigation = ({ token }: BottomNavigationProps): ReactElement => {
             label='Home'
             icon={<Home aria-label='Home icon' />}
           />
-          <S.NewPostButton onClick={() => console.log('new post')}>
+          <S.NewPostButton onClick={() => setOpen(true)}>
             <S.Icon>
               <CommentAdd aria-label='New post button' />
             </S.Icon>
@@ -32,6 +34,7 @@ const BottomNavigation = ({ token }: BottomNavigationProps): ReactElement => {
             label='My Posts'
             icon={<User aria-label='User icon' />}
           />
+          <NewPostModal open={open} setOpen={setOpen} />
         </>
       ) : (
         <>

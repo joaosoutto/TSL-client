@@ -18,6 +18,11 @@ type editPayload = {
   id: string;
 };
 
+type newPostPayload = {
+  title: string | undefined;
+  body: string;
+};
+
 const token = localStorage.getItem('token');
 
 const Api = {
@@ -51,6 +56,14 @@ const Api = {
         headers: { Authorization: `Token ${token}` },
       }
     );
+
+    return response.data;
+  },
+
+  async newPost(payload: newPostPayload) {
+    const response = await axios.post(`${API_BASE_URL}posts/`, payload, {
+      headers: { Authorization: `Token ${token}` },
+    });
 
     return response.data;
   },
