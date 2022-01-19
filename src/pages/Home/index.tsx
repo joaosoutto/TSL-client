@@ -27,7 +27,7 @@ const Home = () => {
       </Layout>
     );
 
-  if (posts.length === 0)
+  if (!loading && posts.length === 0)
     return (
       <Layout>
         <S.NoPostWrapper>
@@ -48,22 +48,26 @@ const Home = () => {
   return (
     <Layout>
       <S.Wrapper>
-        {posts?.map(
-          (post: {
-            title?: string;
-            owner: string;
-            body: string;
-            id: string;
-          }) => (
-            <PostCard
-              title={post.title}
-              owner={post.owner}
-              post={post.body}
-              id={post.id}
-              key={post.id}
-            />
+        {posts
+          ?.sort((a: { id: string }, b: { id: string }) =>
+            a.id > b.id ? -1 : 1
           )
-        )}
+          .map(
+            (post: {
+              title?: string;
+              owner: string;
+              body: string;
+              id: string;
+            }) => (
+              <PostCard
+                title={post.title}
+                owner={post.owner}
+                post={post.body}
+                id={post.id}
+                key={post.id}
+              />
+            )
+          )}
         {token ? <NewPostButton /> : null}
       </S.Wrapper>
     </Layout>

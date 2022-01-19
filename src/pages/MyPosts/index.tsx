@@ -32,7 +32,7 @@ const MyPosts = (): ReactElement => {
       </Layout>
     );
 
-  if (myPosts.length === 0)
+  if (!loading && myPosts.length === 0)
     return (
       <Layout>
         <S.NoPosts>
@@ -46,22 +46,26 @@ const MyPosts = (): ReactElement => {
   return (
     <Layout>
       <S.Wrapper>
-        {myPosts?.map(
-          (post: {
-            title?: string;
-            owner: string;
-            body: string;
-            id: string;
-          }) => (
-            <PostCard
-              title={post.title}
-              owner={post.owner}
-              post={post.body}
-              id={post.id}
-              key={post.id}
-            />
+        {myPosts
+          ?.sort((a: { id: string }, b: { id: string }) =>
+            a.id > b.id ? -1 : 1
           )
-        )}
+          .map(
+            (post: {
+              title?: string;
+              owner: string;
+              body: string;
+              id: string;
+            }) => (
+              <PostCard
+                title={post.title}
+                owner={post.owner}
+                post={post.body}
+                id={post.id}
+                key={post.id}
+              />
+            )
+          )}
         <NewPostButton />
       </S.Wrapper>
     </Layout>
