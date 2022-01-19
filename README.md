@@ -72,5 +72,5 @@ npm start
 
 <h1 style="margin-top: 40px;">Demos</h1>
 
-- <a href="https://drive.google.com/file/d/1u4XyE7j-9flIde2n65DO-x7UE2raEaH2/view?usp=sharing" target="_blank">Web Version</a>
-- <a href="https://drive.google.com/file/d/1UtA4XS0cCIjcPCbdPfLjLhfG3GPtm_16/view?usp=sharing" target="_blank">Mobile Version</a>
+- <a href="https://drive.google.com/file/d/1Fp-DGyyWinFzVKsBDfbvIe6tPiByLg8r/view?usp=sharing" target="_blank">Web Version</a>
+- <a href="https://drive.google.com/file/d/1Yu3gYhL7eKBtm0u4yM0izh0uzx7Gd9yC/view?usp=sharing" target="_blank">Mobile Version</a>
